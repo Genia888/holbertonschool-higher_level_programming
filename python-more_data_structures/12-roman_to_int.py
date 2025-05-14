@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def roman_to_int(s: str) -> int:
+def roman_to_int(roman_string):
 
     roman_numerals = {
         'I': 1,
@@ -13,12 +13,13 @@ def roman_to_int(s: str) -> int:
     total = 0
     prev_value = 0
 
-    for char in reversed(s):
+    for char in roman_string:
         value = roman_numerals[char]
-        if value < prev_value:
-            total -= value
+        if value > prev_value:
+            total += value - 2 * prev_value
         else:
             total += value
         prev_value = value
 
     return total
+
