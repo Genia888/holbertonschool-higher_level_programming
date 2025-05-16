@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+'''
+Function that adds two integers
+a and are the two integers
+Return: a + b
+'''
+
 def add_integer(a, b=98):
     """
     Adds two integers or floats and returns the result as an integer.
