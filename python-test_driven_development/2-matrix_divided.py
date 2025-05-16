@@ -10,14 +10,14 @@ def matrix_divided(matrix, div):
 
     Args:
         matrix (list): A list of lists of integers or floats.
-        div (int/float): The number to divide each element by.
+        div (int or float): The number to divide each element by.
 
     Returns:
-        list: A new matrix with all values divided by div and rounded to 2
+        list: A new matrix with all values divided by div and rounded to 2 decimal places.
 
     Raises:
         TypeError: If the matrix is not a list of lists of integers/floats,
-                  or if rows are not the same size, or if div is not a number.
+                   or if rows are not the same size, or if div is not a number.
         ZeroDivisionError: If div is 0.
     """
     if (not isinstance(matrix, list) or
