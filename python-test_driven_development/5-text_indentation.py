@@ -1,17 +1,24 @@
 #!/usr/bin/python3
 def text_indentation(text):
     """
-    This function prints a text with 2 new lines
-    after each of these characters: ., ? and :
+    Prints a text with 2 new lines after '.', '?', and ':'.
+    Removes leading spaces after these punctuation marks.
     """
-    if type(text) is not str:
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
-    i = 0
-    while i < len(text):
-        print(text[i], end="")
-        if text[i] in ".?:":
-            print("\n")
-            if i + 1 < len(text) and text[i + 1] == " ":
-                i += 1
-        i += 1
-    print("")
+
+    delimiters = ".?:"
+    start = 0
+
+    for i, char in enumerate(text):
+        if char in delimiters:
+            print(text[start:i + 1].strip())
+            print()
+            start = i + 1
+            # Skip all following spaces
+            while start < len(text) and text[start] == ' ':
+                start += 1
+
+    # Print the last part if any
+    if start < len(text):
+        print(text[start:].strip())
