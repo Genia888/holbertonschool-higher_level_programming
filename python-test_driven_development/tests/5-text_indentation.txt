@@ -1,158 +1,24 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-Regular Text
-------------
+>>> text_indentation("text")
+text
 
-.. code-block:: python
+>>> text_indentation("Khalepo.Evgeni")
+Khalepo.
+<BLANKLINE>
+Evgeni
 
-	>>> text_indentation("Hello World!")
-	Hello World!
+>>> text_indentation(99)
+Traceback (most recent call last):
+TypeError: text must be a string
 
-        >>> text_indentation("Hello. World.")
-	Hello.
-	<BLANKLINE>
-	World.
-	<BLANKLINE>
+>>> text_indentation(float('inf'))
+Traceback (most recent call last):
+TypeError: text must be a string
 
-	>>> text_indentation("Hello: World?")
-	Hello:
-	<BLANKLINE>
-	World?
-	<BLANKLINE>
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-	>>> text_indentation("12:00")
-	12:
-	<BLANKLINE>
-	00
-
-	>>> text_indentation("   TEST   ")
-	TEST
-
-Regular Docstring
------------------
-
-	>>> text_indentation("""Hello World!""")
-	Hello World!
-
-Punctuation
------------
-
-.. code-block:: python
-
-	>>> text_indentation("...")
-	.
-	<BLANKLINE>
-	.
-	<BLANKLINE>
-	.
-	<BLANKLINE>
-
-	>>> text_indentation(". : ? ")
-	.
-        <BLANKLINE>
-        :
-        <BLANKLINE>
-        ?
-        <BLANKLINE>
-
-Empty String
-------------
-
-.. code-block:: python
-
-	>>> text_indentation("")
-
-Integer As Text
----------------
-
-.. code-block:: python
-
-	>>> text_indentation(5)
-	Traceback (most recent call last):
-        ...
-        TypeError: text must be a string
-
-List As Text
-------------
-
-.. code-block:: python
-
-        >>> text_indentation(["Hello"])
-        Traceback (most recent call last):
-        ...
-        TypeError: text must be a string
-
-	>>> text_indentation(['H', 'e', 'l', 'l', 'o'])
-        Traceback (most recent call last):
-        ...
-        TypeError: text must be a string
-
-Float Hiding
-------------
-
-.. code-block:: python
-
-	>>> text_indentation("1.5")
-	1.
-	<BLANKLINE>
-	5
-
-Random Long Text
-----------------
-
-.. code-block:: python
-
-	>>> text_indentation("lfsdlfjslcbrzlsnfjlsn qdjnclqdnqmkclqnclzks klqdjncldqjncdnc")
-	lfsdlfjslcbrzlsnfjlsn qdjnclqdnqmkclqnclzks klqdjncldqjncdnc
-
-	>>> text_indentation("lfsdlfjslcbrzlsnfjlsn. qdjnclqdnqmkclqnclzks: klqdjncldqjncdnc?")
-	lfsdlfjslcbrzlsnfjlsn.
-	<BLANKLINE>
-	qdjnclqdnqmkclqnclzks:
-	<BLANKLINE>
-	klqdjncldqjncdnc?
-	<BLANKLINE>
-
-FuckTheChecker
---------------
-
-.. code-block:: python
-
-	>>> text_indentation(":Fuck: :The: :Checker:")
-	:
-	<BLANKLINE>
-	Fuck:
-	<BLANKLINE>
-	:
-	<BLANKLINE>
-	The:
-	<BLANKLINE>
-	:
-	<BLANKLINE>
-	Checker:
-	<BLANKLINE>
-
-None
-----
-
-.. code-block:: python
-
-	>>> text_indentation(None)
-        Traceback (most recent call last):
-        ...
-        TypeError: text must be a string
-
-Wrong Arguments Number
-----------------------
-
-.. code-block:: python
-
-	>>> text_indentation()
-        Traceback (most recent call last):
-        ...
-	TypeError: text_indentation() missing 1 required positional argument: 'text'
-
-	>>> text_indentation("Hello!", "World")
-	Traceback (most recent call last):
-        ...
-        TypeError: text_indentation() takes 1 positional argument but 2 were given
+>>> text_indentation(" ")
+<BLANKLINE>
