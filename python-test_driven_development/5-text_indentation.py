@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""This module provides a function that prints a text
+   with 2 new lines after '.', '?', and ':'."""
+
+
 def text_indentation(text):
     '''Function that print /n after '.' '?' ':'''
 
