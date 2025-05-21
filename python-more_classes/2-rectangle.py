@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-# This module defines a Rectangle class with width and height, and includes
-# methods to calculate area and perimeter.
+"""This module defines a Rectangle class with width and height, and includes
+   methods to calculate area and perimeter."""
+
 
 class Rectangle:
     """Class that defines a rectangle."""
