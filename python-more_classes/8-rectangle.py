@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class with width, height, instance counter, and custom symbol"""
+"""Defines a Rectangle class with width,
+   height, instance counter, and custom symbol"""
 
 
 class Rectangle:
