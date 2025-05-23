@@ -35,20 +35,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """Returns area of rectangle"""
         return self.width * self.height
 
     def perimeter(self):
+        """Returns perimeter of rectangle"""
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
 
     def __str__(self):
+        """Returns a string representation using '#'"""
         if self.width == 0 or self.height == 0:
             return ""
-        rectangle_str = []
-        for _ in range(self.height):
-            rectangle_str.append("#" * self.width)
-        return "\n".join(rectangle_str)
-
-    def __repr__(self):
-        return f"3-rectangle.Rectangle({self.width}, {self.height})"
+        return '\n'.join(['#' * self.width for _ in range(self.height)])
