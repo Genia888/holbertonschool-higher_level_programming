@@ -3,14 +3,15 @@
 
 
 class Rectangle:
-    """Rectangle class with width and height"""
+    """Rectangle with width, height, instance counter, and custom symbol"""
 
-    number_of_instances = 0  # <- class attribute
+    number_of_instances = 0
+    print_symbol = "#"  # default print symbol
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1  # Increment on creation
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -47,11 +48,13 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-        return '\n'.join(['#' * self.width for _ in range(self.height)])
+        # Use str(self.print_symbol) in case it's a list, int, etc.
+        line = str(self.print_symbol) * self.width
+        return "\n".join([line for _ in range(self.height)])
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1  # Decrement on deletion
+        Rectangle.number_of_instances -= 1
