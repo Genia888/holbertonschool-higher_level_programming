@@ -25,3 +25,11 @@
 [-3, -1, 0, 2, 4]
 >>> print(my_list)
 [4, -1, 0, -3, 2]
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> print(my_list)
+[]
