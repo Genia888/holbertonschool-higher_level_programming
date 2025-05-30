@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Abstract base class defining the interface for all shapes"""
 from abc import ABC, abstractmethod
 import math
 
