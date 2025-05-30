@@ -2,6 +2,7 @@
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     """Abstract base class for all shapes."""
 
@@ -44,6 +45,7 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Duck-typed function to print area and perimeter of any shape-like object."""
+    """Duck-typed function to print area
+       and perimeter of any shape-like object."""
     print("Area:", shape.area())
     print("Perimeter:", shape.perimeter())
