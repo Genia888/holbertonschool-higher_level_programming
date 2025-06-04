@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''That fonction returns the JSON representation of an object (string)'''
+"""That fonction returns the JSON representation of an object (string)"""
 
 
 def to_json_string(my_obj):
