@@ -1,6 +1,6 @@
-#!/usr/bin/python3	
+#!/usr/bin/python3
 """That adds all arguments to a Python list,
-   and then saves them to a file."""        
+   and then saves them to a file."""
 
 
 import sys
@@ -15,6 +15,6 @@ if os.path.exists(filename):
     except Exception:
         my_list = []
 else:
-    my_list = []   
+    my_list = []
 my_list.extend(sys.argv[1:])
 save_to_json_file(my_list, filename)
