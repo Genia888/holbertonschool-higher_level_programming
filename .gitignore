@@ -10,3 +10,4 @@ test.py
 8-main_2.py
 *.pkl
 main_02_csv.py
+*.csv
