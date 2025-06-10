@@ -2,7 +2,7 @@
 .gitignore 
 *.pyc
 __pycache__/
-test.py
+*test.py
 *.json
 *.txt
 8-my_class.py
