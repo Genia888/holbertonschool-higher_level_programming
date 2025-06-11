@@ -37,6 +37,13 @@ def verify_password(username, password):
         return username
     return None
 
+# ✅ Correction ici : gestion de l'erreur d'authentification
+
+
+@auth.error_handler
+def unauthorized():
+    return jsonify({"error": "Unauthorized access"}), 401
+
 
 @app.route('/basic-protected')
 @auth.login_required
