@@ -20,8 +20,10 @@ if __name__ == "__main__":
     # Création du curseur
     cur = db.cursor()
 
-    # Construction et exécution de la requête (ATTENTION: injection possible ici !)
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    """Construction et exécution de la requête
+        (ATTENTION: injection possible ici !)"""
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
+        state_name)
     cur.execute(query)
 
     # Affichage des résultats
