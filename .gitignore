@@ -13,3 +13,4 @@ main_02_csv.py
 *.csv
 *.xml
 main_03_xml.py
+**venv
