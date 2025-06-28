@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 '''SQL Alchemy module used to create a State table in 6usa DB'''
 
 
