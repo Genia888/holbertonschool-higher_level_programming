@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from relationship_base import Base
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
 
 class State(Base):
-    """Class that defines a State with a relationship to City"""
+    """State class linked to cities with cascade delete."""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
