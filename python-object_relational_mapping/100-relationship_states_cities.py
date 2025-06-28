@@ -6,9 +6,11 @@ from relationship_base import Base
 from relationship_state import State
 from relationship_city import City
 
+
 def main():
     if len(sys.argv) != 4:
-        print("Usage: ./100-relationship_states_cities.py <username> <password> <database>")
+        print("Usage: ./100-relationship_states_cities.py"
+              " <username> <password> <database>")
         return
 
     username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
@@ -32,6 +34,7 @@ def main():
     session.add(california)
     session.commit()
     session.close()
+
 
 if __name__ == "__main__":
     main()
