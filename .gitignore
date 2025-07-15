@@ -14,4 +14,3 @@ main_02_csv.py
 *.xml
 main_03_xml.py
 **venv
-*main.html
