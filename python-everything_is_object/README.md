@@ -101,5 +101,20 @@ Working on more advanced tasks, I discovered the importance of:
 
 - ````id()```` and memory model: The identity (````id````) helps debug when objects are the same or not, especially with in-place and out-of-place operations.
 
+## Did you know? Python Interns Small Integers!
+In CPython, small integer values are cached and shared for efficiency. The ranges are defined internally as NSMALLNEGINTS (for negatives, typically -5 to -1) and NSMALLPOSINTS (for positives, typically 0 to 256).
+
+This means that all variables assigned to the same small integer actually reference the same object in memory!
+
+Example:
+````python
+a = 10
+b = 10
+print(a is b)  # True, both reference the same interned object
+
+c = 1000
+d = 1000
+print(c is d)  # Usually False, large integers are not interned
+````
 ## Conclusion
 Knowing what’s mutable and what’s not explains most “weird” bugs in Python. Use ````id()```` to debug object identities and be careful with assignments and function arguments, especially with mutable types like lists and dictionaries.
